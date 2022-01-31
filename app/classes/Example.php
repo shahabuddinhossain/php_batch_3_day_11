@@ -75,8 +75,12 @@ class Example
                 echo "<br/>";
             }
         }*/
+
+        /*echo '<pre>';
+        print_r($this->students);*/
+
         echo '<pre>';
-        print_r($this->students);
+        var_dump($this->students);
     } // index function ends here;
 
 }
