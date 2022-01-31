@@ -22,19 +22,28 @@ class Example
             0 => [
                     'name'   => 'Jahed',
                     'email'  => 'jahid@gmail.com',
-                    'mobile' => '01715846578',
+                    'mobile' => [
+                        'mobile1' => '01548795864',
+                        'mobile2' => '01256325654',
+                    ],
             ],
             1 => [
                 'name'   => 'Fahim',
                 'email'  => 'Fahim@gmail.com',
-                'mobile' => '01715841234',
+                'mobile' => [
+                    'mobile1' => '01548791234',
+                    'mobile2' => '01256325678',
+                ],
             ],
             2 => 'BITM',
 
             3 => [
                 'name'   => 'Shahabuddin',
                 'email'  => 'shahabuddin@gmail.com',
-                'mobile' => '01548734587',
+                'mobile' => [
+                    'mobile1' => '01548791234',
+                    'mobile2' => '01256325678',
+                ],
             ],
         ];
 
@@ -53,15 +62,21 @@ class Example
         }*/
 
 
-        foreach ($this->students as $key => $item) {
+        /*foreach ($this->students as $key => $item)
+        {
 
-            if(is_array($item)) {
+            if(is_array($item))
+            {
                 foreach ($item as $value ) {
-                    echo $value. "    ";
+                    if(is_array($value)) {
+                        foreach ($value as $v_value) echo $v_value. "  ";
+                    } else { echo $value. "    ";}
                 }
                 echo "<br/>";
             }
-        }
+        }*/
+        echo '<pre>';
+        print_r($this->students);
     } // index function ends here;
 
 }
